@@ -23,6 +23,4 @@ namespace OOP_basics
             Console.WriteLine(s);
 
             Console.ReadKey();
-        }
-    }
-}
+

@@ -15,6 +15,7 @@ namespace OOP_basics.Tests
             _bankAccount.PutMoney(100);
             double actual = _bankAccount.Balance;
 
+
             Assert.Equal(expected, actual);
         }
 

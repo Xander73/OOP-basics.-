@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 
 namespace OOP_basics
 {
@@ -9,12 +10,14 @@ namespace OOP_basics
         private static long _numberAccount;
 
         private double _balance;
+
         AccountType _accountType;
 
 
         public BankAccount() => AddNumberAccount();
 
         public BankAccount (double balance, AccountType accountType)
+
         {
             AddNumberAccount();
             _balance = balance;
@@ -32,7 +35,9 @@ namespace OOP_basics
 
         }
 
+      
         public double Balance
+
         {
             get => _balance;
             set => _balance = value;
@@ -50,6 +55,7 @@ namespace OOP_basics
 
 
         public string PutMoney(double money)
+
         {
             if (money <= 0)
             {
@@ -61,6 +67,7 @@ namespace OOP_basics
 
 
         public string Withdrawmoney (double money)
+
         {
             if (money <= 0)
             {
@@ -94,6 +101,7 @@ namespace OOP_basics
             return "Недостаточно средств для перевода.";
                 
         }
+
 
 
         //public long GetNumberAccount() => _numberAccount;
