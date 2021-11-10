@@ -15,13 +15,7 @@ namespace OOP_basics
         /// </remarks>
         static void Main(string[] args)
         {
-            //TestExample test = new TestExample();
-                        
-            ApartmentBuildingLibrary.TestExample test = new ApartmentBuildingLibrary.TestExample();
-
-            test.Print();
-            test.DeleteApartment();
-            test.Print();
+            
 
             Console.ReadKey();
         }
