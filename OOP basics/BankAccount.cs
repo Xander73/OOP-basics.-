@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace OOP_basics
 {
     public enum AccountType { Current, Settlement, Credit, Deposit};
@@ -52,10 +53,23 @@ namespace OOP_basics
 
         }
 
+
         private void AddNumberAccount() => CurrentNumberAccount = ++_numberAccount;
 
 
         public string PutMoney(double money)
+        public int Balance
+        {
+            get => _balance;
+            set => _balance = value;
+        }
+
+
+        public AccountType AccountType
+        {
+            get => _accountType;
+            set => _accountType = value;
+        }
         {
             if (money <= 0)
             {
@@ -64,6 +78,7 @@ namespace OOP_basics
             Balance += money;
             return $"Текущая сумма на счете {Balance}.";
         }
+
 
 
         public string Withdrawmoney (double money)
@@ -87,6 +102,7 @@ namespace OOP_basics
             Console.WriteLine($"Balance - {Balance}");
             Console.WriteLine($"Account type - {AccountType}");
         }
+
 
 
         public string TransferMoney (BankAccount bankAccount, double amount)

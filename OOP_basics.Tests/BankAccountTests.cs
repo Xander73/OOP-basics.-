@@ -1,3 +1,4 @@
+
 ﻿using Xunit;
 
 namespace OOP_basics.Tests
@@ -11,6 +12,7 @@ namespace OOP_basics.Tests
             int expected = 200;
             _bankAccount.PutMoney(100);
             double actual = _bankAccount.Balance;
+
 
             Assert.Equal(expected, actual);
         }
@@ -45,6 +47,7 @@ namespace OOP_basics.Tests
             int expected = 90;
             _bankAccount.Withdrawmoney(10);
             double actual = _bankAccount.Balance;
+
 
             Assert.Equal(expected, actual);
         }
