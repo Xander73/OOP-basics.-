@@ -87,5 +87,63 @@ namespace OOP_basics.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void OperetorEqual_2EqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = first;
+
+            Assert.True(first == second);
+        }
+
+
+        [Fact]
+        public void OperetorEqual_2NoEqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = new BankAccount(100, AccountType.Current);
+
+            Assert.False(first == second);
+        }
+
+
+        [Fact]
+        public void OperetorNoEqual_2EqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = first;
+
+            Assert.False(first != second);
+        }
+
+
+        [Fact]
+        public void OperetorNoEqual_2NoEqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = new BankAccount(100, AccountType.Current);
+
+            Assert.True(first != second);
+        }
+
+        [Fact]
+        public void EqualMethod_2EqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = first;
+
+            Assert.Equal(first, second);
+        }
+
+
+        [Fact]
+        public void EqualMethod_2NoEqualArguments_TrueReturned()
+        {
+            BankAccount first = new BankAccount(100, AccountType.Current);
+            BankAccount second = new BankAccount(100, AccountType.Current);
+
+            Assert.NotEqual (first, second);
+        }
     }
 }

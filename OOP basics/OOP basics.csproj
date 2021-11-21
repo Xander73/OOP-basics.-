@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OtherMethods\OtherMethods.csproj" />
+    <ProjectReference Include="..\Shapes\Shapes.csproj" />
   </ItemGroup>
 
   <ItemGroup>

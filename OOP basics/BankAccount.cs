@@ -3,6 +3,7 @@ using System;
 
 
 
+
 namespace OOP_basics
 {
     public enum AccountType { Current, Settlement, Credit, Deposit};
@@ -11,10 +12,31 @@ namespace OOP_basics
     {
         private static long _numberAccount;
 
+        private long _currentNumberAccount;
 
         private double _balance;
 
         AccountType _accountType;
+
+        public double Balance
+        {
+            get => _balance;
+            set => _balance = value;
+        }
+
+
+        public AccountType AccountType
+        {
+            get => _accountType;
+            set => _accountType = value;
+        }
+
+        public long CurrentNumberAccount
+        {
+            get => _currentNumberAccount;
+
+            private set => _currentNumberAccount = value;
+        }
 
 
         public BankAccount() => AddNumberAccount();
@@ -43,9 +65,11 @@ namespace OOP_basics
         }
 
 
+        private void AddNumberAccount() => CurrentNumberAccount = ++_numberAccount;
 
 
-        public double Balance
+        public string PutMoney(double money)
+        public int Balance
 
         {
             get => _balance;
@@ -58,13 +82,6 @@ namespace OOP_basics
             get => _accountType;
             set => _accountType = value;
         }
-
-
-        private static void AddNumberAccount() => ++_numberAccount;
-
-
-
-        public string PutMoney(double money)
 
         {
             if (money <= 0)
@@ -111,19 +128,34 @@ namespace OOP_basics
                 return $"Сумма {amount} переведена на счет.\nБаланс счета - {Balance}.";  
             }
             return "Недостаточно средств для перевода.";
-                
         }
 
 
 
+        public override bool Equals(object first)
+        {
+            if (first != null)
+                if (first is BankAccount)
+                {
+                    return CurrentNumberAccount == ((BankAccount)first).CurrentNumberAccount;
+                }
+            return false;   
+        }
+            
 
 
+        public override int GetHashCode() => CurrentNumberAccount.GetHashCode();
 
-        //public long GetNumberAccount() => _numberAccount;
-        //public string GetBalance() => _balance;
-        //public AccountType GetAccountType() => _accountType;
-        //public void SetBalance(string balance) => _balance = balance;
-        //public void SetAccountType(AccountType accountType) => _accountType = accountType;
-        //private static void AddNumberAccount() => ++_numberAccount;
+
+        public static bool operator !=(BankAccount first, BankAccount second) => !first.Equals(second);
+
+
+        public static bool operator ==(BankAccount first, BankAccount second) => first.Equals (second);
+
+
+        public override string ToString() => $"NumberAccount - {CurrentNumberAccount}\n" +
+                                             $"AccountType - {AccountType}\n" +
+                                             $"Balance - {Balance}";
+
     }
 }
