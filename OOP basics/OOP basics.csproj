@@ -6,4 +6,8 @@
     <RootNamespace>OOP_basics</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OtherMethods\OtherMethods.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+
 
 namespace OOP_basics
 {
@@ -10,13 +9,15 @@ namespace OOP_basics
     {
         private static long _numberAccount;
 
-        private int _balance;
+        private double _balance;
+
         AccountType _accountType;
 
 
         public BankAccount() => AddNumberAccount();
 
-        public BankAccount (int balance, AccountType accountType)
+        public BankAccount (double balance, AccountType accountType)
+
         {
             AddNumberAccount();
             _balance = balance;
@@ -24,7 +25,7 @@ namespace OOP_basics
         }
 
 
-        public BankAccount(int balance) : this (balance, default)
+        public BankAccount(double balance) : this (balance, default)
         {
 
         }
@@ -34,7 +35,9 @@ namespace OOP_basics
 
         }
 
-        public int Balance
+      
+        public double Balance
+
         {
             get => _balance;
             set => _balance = value;
@@ -51,7 +54,8 @@ namespace OOP_basics
         private static void AddNumberAccount() => ++_numberAccount;
 
 
-        public string PutMoney(int money)
+        public string PutMoney(double money)
+
         {
             if (money <= 0)
             {
@@ -62,7 +66,8 @@ namespace OOP_basics
         }
 
 
-        public string Withdrawmoney (int money)
+        public string Withdrawmoney (double money)
+
         {
             if (money <= 0)
             {
@@ -83,6 +88,20 @@ namespace OOP_basics
             Console.WriteLine($"Balance - {Balance}");
             Console.WriteLine($"Account type - {AccountType}");
         }
+
+
+        public string TransferMoney (BankAccount bankAccount, double amount)
+        {
+            if (bankAccount.Balance > amount)
+            {
+                Balance += amount;
+                bankAccount.Balance -= amount;
+                return $"Сумма {amount} переведена на счет.\nБаланс счета - {Balance}.";  
+            }
+            return "Недостаточно средств для перевода.";
+                
+        }
+
 
 
         //public long GetNumberAccount() => _numberAccount;

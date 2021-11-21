@@ -1,22 +1,26 @@
 ﻿using System;
+using OtherMethods;
 
 namespace OOP_basics
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            BankAccount bankAccount1 = new BankAccount(AccountType.Credit);
-            bankAccount1.Print();
+            Console.WriteLine("Переворачиваем строку задом на перед через цикл.");
+            Console.WriteLine(ThirdLesson.ReverseStringLoop("abcd"));
             Console.WriteLine();
 
-            BankAccount bankAccount2 = new BankAccount(100);
-            bankAccount2.Print();
+
+            Console.WriteLine("Переворачиваем строку задом на перед через стэк.");
+            Console.WriteLine(ThirdLesson.ReverseStringStack("abcd"));
             Console.WriteLine();
 
-            BankAccount bankAccount3 = new BankAccount(200, AccountType.Deposit);
-            bankAccount3.Print();
-            Console.WriteLine();
-        }
-    }
-}
+
+            Console.WriteLine("Вытаскиваем электронные адреса и файла.");
+            string s = "";
+            ThirdLesson.SearchMail(ref s);
+            Console.WriteLine(s);
+
+            Console.ReadKey();
+
