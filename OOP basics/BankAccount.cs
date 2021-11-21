@@ -1,4 +1,7 @@
-﻿using System;
+using System;
+
+
+
 
 
 namespace OOP_basics
@@ -8,8 +11,11 @@ namespace OOP_basics
     public class BankAccount
     {
         private static long _numberAccount;
+
         private long _currentNumberAccount;
+
         private double _balance;
+
         AccountType _accountType;
 
         public double Balance
@@ -35,7 +41,9 @@ namespace OOP_basics
 
         public BankAccount() => AddNumberAccount();
 
+
         public BankAccount (double balance, AccountType accountType)
+
         {
             AddNumberAccount();
             _balance = balance;
@@ -43,7 +51,10 @@ namespace OOP_basics
         }
 
 
+
         public BankAccount(double balance) : this (balance, default)
+
+
         {
 
         }
@@ -59,6 +70,7 @@ namespace OOP_basics
 
         public string PutMoney(double money)
         public int Balance
+
         {
             get => _balance;
             set => _balance = value;
@@ -70,6 +82,7 @@ namespace OOP_basics
             get => _accountType;
             set => _accountType = value;
         }
+
         {
             if (money <= 0)
             {
@@ -82,6 +95,7 @@ namespace OOP_basics
 
 
         public string Withdrawmoney (double money)
+
         {
             if (money <= 0)
             {
@@ -117,6 +131,7 @@ namespace OOP_basics
         }
 
 
+
         public override bool Equals(object first)
         {
             if (first != null)
@@ -141,5 +156,6 @@ namespace OOP_basics
         public override string ToString() => $"NumberAccount - {CurrentNumberAccount}\n" +
                                              $"AccountType - {AccountType}\n" +
                                              $"Balance - {Balance}";
+
     }
 }

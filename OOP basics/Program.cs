@@ -4,8 +4,11 @@ using System;
 
 namespace OOP_basics
 {
+
     public class Program
+
     {        
+
         static void Main(string[] args)
         {
             BankAccount first = new BankAccount(100, AccountType.Current);
@@ -53,6 +56,8 @@ namespace OOP_basics
             Console.WriteLine("Rectangle area: " + ((Rectangle)figure).Areal());
 
             Console.ReadKey();
+
+
         }
     }
 }

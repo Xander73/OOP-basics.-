@@ -5,13 +5,16 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP basics", "OOP basics\OOP basics.csproj", "{6334F0F7-9C32-409D-BB85-6F5C2EB44351}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_basics.Tests", "OOP_basics.Tests\OOP_basics.Tests.csproj", "{D8262BE9-18CE-4D0A-966F-220A39D9F6CB}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtherMethods", "OtherMethods\OtherMethods.csproj", "{26644FA7-FDDF-4C6A-BDBB-012AD1C8B332}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csproj", "{3519B0FB-18D6-4165-924D-EB39DFF5BB60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Tests", "Shapes.Tests\Shapes.Tests.csproj", "{2927E61C-30E4-4C1C-AFF1-868531F92C6A}"
+
 
 EndProject
 Global
@@ -28,10 +31,12 @@ Global
 		{D8262BE9-18CE-4D0A-966F-220A39D9F6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8262BE9-18CE-4D0A-966F-220A39D9F6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8262BE9-18CE-4D0A-966F-220A39D9F6CB}.Release|Any CPU.Build.0 = Release|Any CPU
+
 		{26644FA7-FDDF-4C6A-BDBB-012AD1C8B332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26644FA7-FDDF-4C6A-BDBB-012AD1C8B332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26644FA7-FDDF-4C6A-BDBB-012AD1C8B332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26644FA7-FDDF-4C6A-BDBB-012AD1C8B332}.Release|Any CPU.Build.0 = Release|Any CPU
+
 		{3519B0FB-18D6-4165-924D-EB39DFF5BB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3519B0FB-18D6-4165-924D-EB39DFF5BB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3519B0FB-18D6-4165-924D-EB39DFF5BB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,6 +45,7 @@ Global
 		{2927E61C-30E4-4C1C-AFF1-868531F92C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2927E61C-30E4-4C1C-AFF1-868531F92C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2927E61C-30E4-4C1C-AFF1-868531F92C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+
 
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
