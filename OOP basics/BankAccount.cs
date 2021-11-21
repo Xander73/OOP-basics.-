@@ -1,6 +1,8 @@
 using System;
 
 
+
+
 namespace OOP_basics
 {
     public enum AccountType { Current, Settlement, Credit, Deposit};
@@ -9,12 +11,14 @@ namespace OOP_basics
     {
         private static long _numberAccount;
 
+
         private double _balance;
 
         AccountType _accountType;
 
 
         public BankAccount() => AddNumberAccount();
+
 
         public BankAccount (double balance, AccountType accountType)
 
@@ -25,7 +29,10 @@ namespace OOP_basics
         }
 
 
+
         public BankAccount(double balance) : this (balance, default)
+
+
         {
 
         }
@@ -35,7 +42,9 @@ namespace OOP_basics
 
         }
 
-      
+
+
+
         public double Balance
 
         {
@@ -54,6 +63,7 @@ namespace OOP_basics
         private static void AddNumberAccount() => ++_numberAccount;
 
 
+
         public string PutMoney(double money)
 
         {
@@ -64,6 +74,7 @@ namespace OOP_basics
             Balance += money;
             return $"Текущая сумма на счете {Balance}.";
         }
+
 
 
         public string Withdrawmoney (double money)
@@ -90,6 +101,7 @@ namespace OOP_basics
         }
 
 
+
         public string TransferMoney (BankAccount bankAccount, double amount)
         {
             if (bankAccount.Balance > amount)
@@ -101,6 +113,9 @@ namespace OOP_basics
             return "Недостаточно средств для перевода.";
                 
         }
+
+
+
 
 
 

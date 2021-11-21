@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+
+﻿using Xunit;
+
 
 namespace OOP_basics.Tests
 {
@@ -13,6 +12,7 @@ namespace OOP_basics.Tests
             BankAccount _bankAccount = new BankAccount(100, AccountType.Current);
             int expected = 200;
             _bankAccount.PutMoney(100);
+
             double actual = _bankAccount.Balance;
 
 
@@ -48,7 +48,9 @@ namespace OOP_basics.Tests
             BankAccount _bankAccount = new BankAccount(100, AccountType.Current);
             int expected = 90;
             _bankAccount.Withdrawmoney(10);
+
             double actual = _bankAccount.Balance;
+
 
             Assert.Equal(expected, actual);
         }
