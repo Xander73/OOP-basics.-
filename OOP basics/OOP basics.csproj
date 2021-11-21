@@ -10,4 +10,10 @@
     <ProjectReference Include="..\OtherMethods\OtherMethods.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ApartmentBuilding">
+      <HintPath>..\ApartmentBuilding.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
