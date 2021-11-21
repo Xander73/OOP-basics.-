@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 
 
 
@@ -40,6 +41,8 @@ namespace OOP_basics
         {
 
         }
+
+
 
 
         public double Balance
@@ -110,6 +113,8 @@ namespace OOP_basics
             return "Недостаточно средств для перевода.";
                 
         }
+
+
 
 
 
