@@ -1,4 +1,4 @@
-﻿using Shapes;
+﻿using _7_Lesson;
 using System;
 
 namespace OOP_basics
@@ -7,21 +7,28 @@ namespace OOP_basics
     {        
         static void Main(string[] args)
         {
-            BankAccount first = new BankAccount(100, AccountType.Current);
+            //int a = 'a';
+            //int b = 'z';
+            //int c = 'A';
+            //int d = 'Z';
+            //Console.WriteLine("a - z - A - Z");
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(c);
+            //Console.WriteLine(d);
+            //Console.WriteLine();
+            //Console.WriteLine();
 
-            BankAccount second = new BankAccount(100, AccountType.Current);
-
-            Console.WriteLine("Operator == " + (first == second));
-
-            Console.WriteLine("Operator != " + (first != second));
-
-            Console.WriteLine("Method Equals - " + first.Equals(second));
-
-            Console.WriteLine("Method Equals - " + first.Equals(first));
-
+            Console.WriteLine("Encryption");
+            ICoder coder = new ACoder("Abc");
+            Console.WriteLine("A Encoding - " + coder.Encode());
+            Console.WriteLine("A Decoding - " + coder.Decode());
+            Console.WriteLine();
+            coder = new BCoder("Abc");
+            Console.WriteLine("B Encoding - " + coder.Encode());
+            Console.WriteLine("B Decoding - " + coder.Decode());
             Console.WriteLine();
 
-            Console.WriteLine(first);
 
             Console.WriteLine("==========\nФигуры\n=========");
 
@@ -37,7 +44,7 @@ namespace OOP_basics
 
             Console.WriteLine("Circle ToString");
 
-            Console.WriteLine(figure.ToString());
+            Console.Write(figure.ToString());
 
             Console.WriteLine("Circle area: " + ((Circle)figure).Areal());
 
@@ -47,7 +54,7 @@ namespace OOP_basics
 
             Console.WriteLine("Rectangle ToString");
 
-            Console.WriteLine(figure.ToString());
+            Console.Write(figure.ToString());
 
             Console.WriteLine("Rectangle area: " + ((Rectangle)figure).Areal());
 

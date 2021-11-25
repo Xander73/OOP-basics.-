@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>OOP_basics</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\7_Lesson\_7_Lesson.csproj" />
     <ProjectReference Include="..\OtherMethods\OtherMethods.csproj" />
     <ProjectReference Include="..\Shapes\Shapes.csproj" />
   </ItemGroup>
