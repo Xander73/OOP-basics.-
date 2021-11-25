@@ -6,6 +6,7 @@
     <RootNamespace>OOP_basics</RootNamespace>
   </PropertyGroup>
 
+
   <ItemGroup>
     <ProjectReference Include="..\7_Lesson\_7_Lesson.csproj" />
     <ProjectReference Include="..\OtherMethods\OtherMethods.csproj" />
@@ -17,5 +18,6 @@
       <HintPath>..\ApartmentBuilding.dll</HintPath>
     </Reference>
   </ItemGroup>
+
 
 </Project>

@@ -1,10 +1,15 @@
+
 ﻿using _7_Lesson;
+
 using System;
 
 namespace OOP_basics
 {
+
     public class Program
+
     {        
+
         static void Main(string[] args)
         {
             //int a = 'a';
@@ -59,6 +64,8 @@ namespace OOP_basics
             Console.WriteLine("Rectangle area: " + ((Rectangle)figure).Areal());
 
             Console.ReadKey();
+
+
         }
     }
 }
